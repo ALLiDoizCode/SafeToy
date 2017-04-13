@@ -25,7 +25,7 @@ final class ToyModel {
 
     }
     
-    func toJson() -> Document{
+    func toDoc() -> Document{
         
         var document = Document()
         

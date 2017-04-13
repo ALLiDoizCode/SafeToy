@@ -31,4 +31,24 @@ class DataBaseManager {
         
         return "\(true)"
     }
+    
+    func getToys(skip:Int,limit:Int) -> String {
+        
+        var objects:Document = []
+        
+        do {
+            
+            let results = Array(try toyCollection.find(skipping: Int32(skip),limitedTo: Int32(limit)))
+            
+            for result in results {
+                
+                objects.append(result)
+            }
+           
+        }catch{
+            
+        }
+        
+        return objects.makeExtendedJSON()
+    }
 }
