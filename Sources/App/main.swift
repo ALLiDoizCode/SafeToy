@@ -3,8 +3,8 @@ import MongoKitten
 
 let drop = Droplet()
 
-let server = try Server(mongoURL: "mongodb://heroku_lbjdb13z:ku67shqj08gv3731n3di33625u@ds137760.mlab.com:37760/heroku_lbjdb13z")
-let database = server["heroku_lbjdb13z"]
+let server = try Server(mongoURL: "mongodb://heroku_b5f4gqm9:tiankpljohrrqsd1qplmpj58am@ds159330.mlab.com:59330/heroku_b5f4gqm9")
+let database = server["heroku_b5f4gqm9"]
 
 let toy = ToyController()
 
