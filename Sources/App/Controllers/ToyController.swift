@@ -31,7 +31,7 @@ final class ToyController {
             return Abort.badRequest.message
         }
         
-        guard let status = request.data["status"]?.bool else {
+        guard let description = request.data["description"]?.string else {
             
             return Abort.badRequest.message
         }
@@ -41,7 +41,7 @@ final class ToyController {
             return Abort.badRequest.message
         }
         
-        let newToy = ToyModel(name: name, status: status, image: image)
+        let newToy = ToyModel(name: name, description: description, image: image)
         
         let result = DataBaseManager(db: db).save(doc: newToy.toDoc())
         
