@@ -13,25 +13,25 @@ final class ToyModel {
     
     var id: String?
     var name:String!
-    var status:Bool!
+    var description:String!
     var image:String!
     
-    init(name:String,status:Bool,image:String) {
+    init(name:String,description:String,image:String) {
         
         self.id = nil
         self.name = name
-        self.status = status
+        self.description = description
         self.image = image
 
     }
     
-    func toJson() -> Document{
+    func toDoc() -> Document{
         
         var document = Document()
         
         document["_id"] = id
         document["name"] = name
-        document["status"] = status
+        document["description"] = description
         document["image"] = image
         
         return document
